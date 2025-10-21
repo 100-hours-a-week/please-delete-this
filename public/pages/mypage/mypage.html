@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <title>마이페이지 - Kaboocam</title>
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/pages/mypage/mypage.css">
+</head>
+<body>
+  <div class="page-wrapper">
+    <main class="main-content container">
+      <div class="mypage-container">
+        <h1 class="page-title">마이페이지</h1>
+
+        <!-- Profile Section -->
+        <section class="mypage-section card">
+          <h2 class="section-title">프로필 정보</h2>
+          
+          <div class="profile-display">
+            <div class="profile-image-wrapper">
+              <img id="current-profile-image" src="/placeholder.svg" alt="프로필 이미지" class="profile-image">
+            </div>
+            <div class="profile-info">
+              <p class="profile-nickname" id="current-nickname"></p>
+              <p class="profile-email" id="current-email"></p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Change Profile Image -->
+        <section class="mypage-section card">
+          <h2 class="section-title">프로필 이미지 변경</h2>
+          
+          <form id="image-form" class="mypage-form">
+            <div class="form-group">
+              <div class="image-upload-area">
+                <div class="image-preview" id="image-preview">
+                  <img id="preview-image" src="/placeholder.svg" alt="미리보기" style="display: none;">
+                  <div id="preview-placeholder" class="preview-placeholder">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                      <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                      <polyline points="21 15 16 10 5 21"></polyline>
+                    </svg>
+                    <p>이미지를 선택하세요</p>
+                  </div>
+                </div>
+                <input type="file" id="profile-image-input" accept="image/*" hidden>
+                <button type="button" class="btn btn-outline" id="select-image-btn">이미지 선택</button>
+              </div>
+              <div class="form-error" id="image-error"></div>
+            </div>
+            <button type="submit" class="btn btn-primary">이미지 변경</button>
+          </form>
+        </section>
+
+        <!-- Change Nickname -->
+        <section class="mypage-section card">
+          <h2 class="section-title">닉네임 변경</h2>
+          
+          <form id="nickname-form" class="mypage-form">
+            <div class="form-group">
+              <label for="new-nickname" class="form-label">새 닉네임</label>
+              <input 
+                type="text" 
+                id="new-nickname" 
+                class="form-input" 
+                placeholder="새 닉네임을 입력하세요"
+                required
+              >
+              <div class="form-error" id="nickname-error"></div>
+            </div>
+            <button type="submit" class="btn btn-primary">닉네임 변경</button>
+          </form>
+        </section>
+
+        <!-- Change Password -->
+        <section class="mypage-section card">
+          <h2 class="section-title">비밀번호 변경</h2>
+          
+          <form id="password-form" class="mypage-form">
+            <div class="form-group">
+              <label for="current-password" class="form-label">현재 비밀번호</label>
+              <input 
+                type="password" 
+                id="current-password" 
+                class="form-input" 
+                placeholder="현재 비밀번호를 입력하세요"
+                required
+              >
+              <div class="form-error" id="current-password-error"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="new-password" class="form-label">새 비밀번호</label>
+              <input 
+                type="password" 
+                id="new-password" 
+                class="form-input" 
+                placeholder="새 비밀번호를 입력하세요"
+                required
+              >
+              <div class="form-helper">8자 이상, 영문/숫자/특수문자 포함</div>
+              <div class="form-error" id="new-password-error"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="new-password-confirm" class="form-label">새 비밀번호 확인</label>
+              <input 
+                type="password" 
+                id="new-password-confirm" 
+                class="form-input" 
+                placeholder="새 비밀번호를 다시 입력하세요"
+                required
+              >
+              <div class="form-error" id="new-password-confirm-error"></div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">비밀번호 변경</button>
+          </form>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script type="module" src="/js/common.js"></script>
+  <script type="module" src="/pages/mypage/mypage.js"></script>
+</body>
+</html>

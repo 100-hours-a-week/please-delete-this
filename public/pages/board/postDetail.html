@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>게시글 상세 - Kaboocam</title>
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/theme.css" />
+    <link rel="stylesheet" href="/css/layout.css" />
+    <link rel="stylesheet" href="/pages/board/postDetail.css" />
+  </head>
+  <body>
+    <div id="header-container"></div>
+
+    <main class="post-detail-page">
+      <div class="post-detail-container">
+        <!-- Post Header -->
+        <section class="post-header">
+          <h1 id="post-title" class="post-title"></h1>
+          <div class="post-meta-header">
+            <div class="post-author-info">
+              <img id="author-avatar" src="/user-profile-illustration.png" alt="Author" class="author-avatar" />
+              <span id="author-name" class="author-name"></span>
+            </div>
+            <div class="post-stats">
+              <span id="post-views" class="stat-item">👁️ 0</span>
+              <span id="post-date" class="stat-item"></span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Post Images -->
+        <section id="post-images" class="post-images"></section>
+
+        <!-- Post Content -->
+        <article id="post-content" class="post-content"></article>
+
+        <!-- Post Actions -->
+        <div class="post-actions">
+          <button id="like-btn" class="btn-like">
+            <span class="like-icon">🤍</span>
+            <span id="like-count">0</span>
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script type="module" src="/js/common.js"></script>
+    <script type="module" src="/pages/board/postDetail.js"></script>
+  </body>
+</html>
